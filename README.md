@@ -16,9 +16,9 @@ Usage:
    include -> lodepng -> lodepng.cpp
 4. Open the TeaponSolution Project properties
 5. Go to C/C++, then add the following Additional Include Directories. 
-   1. $\$$(SolutionDir)include
-   2. $\$$(SolutionDir)include\freeglut\include\ 
-   3. $\$$(SolutionDir)include\glew\include\ 
+   1. \$(SolutionDir)include
+   2. \$(SolutionDir)include\freeglut\include\ 
+   3. $(SolutionDir)include\glew\include\ 
 6. Go to Linker -> General, and ad the following to Additional Library Directories 
    1. $\$$(SolutionDir)include\freeglut\lib\\$(LibrariesArchitecture)\ 
    2. $\$$(SolutionDir)include\glew\lib\Release\\$(LibrariesArchitecture)\ 
