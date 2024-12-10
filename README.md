@@ -17,11 +17,11 @@ Usage:
 4. Open the TeaponSolution Project properties
 5. Go to C/C++, then add the following Additional Include Directories. 
    $\$$(SolutionDir)include
-   $\$$(SolutionDir)include\freeglut\include\
-   $\$$(SolutionDir)include\glew\include\
+   $\$$(SolutionDir)include\freeglut\include\ 
+   $\$$(SolutionDir)include\glew\include\ 
 6. Go to Linker -> General, and ad the following to Additional Library Directories
-   $\$$(SolutionDir)include\freeglut\lib\$\$$(LibrariesArchitecture)\
-   $\$$(SolutionDir)include\glew\lib\Release\$\$$(LibrariesArchitecture)\
+   $\$$(SolutionDir)include\freeglut\lib\$\$$(LibrariesArchitecture)\ 
+   $\$$(SolutionDir)include\glew\lib\Release\$\$$(LibrariesArchitecture)\ 
 7. Then under Linker -> Input, add the following to Additional Dependencies
    freeglut.lib
    glew32.lib
