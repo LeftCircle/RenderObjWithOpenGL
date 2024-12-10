@@ -1,0 +1,7 @@
+# Ignore the Release directory
+Release/
+Debug/
+x64/
+x86/
+.vscode/
+.vs/
