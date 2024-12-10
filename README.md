@@ -20,8 +20,8 @@ Usage:
    2. \$(SolutionDir)include\freeglut\include\ 
    3. $(SolutionDir)include\glew\include\ 
 6. Go to Linker -> General, and ad the following to Additional Library Directories 
-   1. $\$$(SolutionDir)include\freeglut\lib\\$(LibrariesArchitecture)\ 
-   2. $\$$(SolutionDir)include\glew\lib\Release\\$(LibrariesArchitecture)\ 
+   1. $(SolutionDir)include\freeglut\lib\\$(LibrariesArchitecture)\ 
+   2. $(SolutionDir)include\glew\lib\Release\\$(LibrariesArchitecture)\ 
 7. Then under Linker -> Input, add the following to Additional Dependencies
    1. freeglut.lib
    2. glew32.lib
