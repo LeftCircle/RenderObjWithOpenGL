@@ -1,10 +1,17 @@
 # An obj renderer with OpenGL
-The name might be TeapotVisualStudio, but it can render .obj files!
+The name might be TeapotVisualStudio, but it can render .obj files!  
+
+For a more in depth breakdown of the code, checkout the [blog breakdown](https://www.richardcato.com/blogs/interactivecomputergraphics)
 
 Usage:
   TeapotVisualStudio.exe <filename.obj>
   the .obj file should contain a material that also includes ambient, diffuse, and specular maps
   Paths to the maps should be relative to the .obj file
+
+# Running the code
+1. Open the visual studio solution
+2. Set the platform to x86 and the build mode to release
+3. You should be able to build! 
 
 # Configuring Visual Studio
 1. Create a new visual studio empty C++ project, then add all of the files to the

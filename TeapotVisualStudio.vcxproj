@@ -99,6 +99,14 @@
       <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>freeglut.lib;glew32.lib</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)brick.png" "$(TargetDir)"
+copy /Y "$(SolutionDir)brick-specular.png" "$(TargetDir)"
+copy /Y "$(SolutionDir)shader.vert" "$(TargetDir)"
+copy /Y "$(SolutionDir)shader.frag" "$(TargetDir)"
+copy /Y "$(SolutionDir)teapot.mtl" "$(TargetDir)"
+copy /Y "$(SolutionDir)teapot.obj" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -118,6 +126,14 @@
       <AdditionalLibraryDirectories>$(SolutionDir)lib;$(SolutionDir)include\glew\lib\Release\$(LibrariesArchitecture)\;$(SolutionDir)include\freeglut\lib\$(LibrariesArchitecture)\</AdditionalLibraryDirectories>
       <AdditionalDependencies>freeglut.lib;glew32.lib</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)brick.png" "$(TargetDir)"
+copy /Y "$(SolutionDir)brick-specular.png" "$(TargetDir)"
+copy /Y "$(SolutionDir)shader.vert" "$(TargetDir)"
+copy /Y "$(SolutionDir)shader.frag" "$(TargetDir)"
+copy /Y "$(SolutionDir)teapot.mtl" "$(TargetDir)"
+copy /Y "$(SolutionDir)teapot.obj" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -147,6 +163,16 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)brick.png" "$(TargetDir)"
+copy /Y "$(SolutionDir)brick-specular.png" "$(TargetDir)"
+copy /Y "$(SolutionDir)shader.vert" "$(TargetDir)"
+copy /Y "$(SolutionDir)shader.frag" "$(TargetDir)"
+copy /Y "$(SolutionDir)teapot.mtl" "$(TargetDir)"
+copy /Y "$(SolutionDir)teapot.obj" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="include\lodepng\lodepng.cpp" />
