@@ -13,13 +13,13 @@ Usage:
 3. Build the solution
 4. Navigate to the Release folder
 5. Confirm that ObjRenderer.exe is in the Release folder along with
-  1. brick.png
-  2. brick-specular.png
-  3. freeglut.dll
-  4. shader.frag
-  5. shader.vert
-  6. teapot.mtl
-  7. teapot.obj
+    1. brick.png
+    2. brick-specular.png
+    3. freeglut.dll
+    4. shader.frag
+    5. shader.vert
+    6. teapot.mtl
+    7. teapot.obj
 6. You can now run ObjRenderer.exe from the command prompt with ObjRendere.exe <path_to.obj>
 
 # Configuring Visual Studio
@@ -32,23 +32,22 @@ Usage:
    include -> lodepng -> lodepng.cpp
 4. Open the TeaponSolution Project properties
 5. Go to C/C++, then add the following Additional Include Directories. 
-   1. \$(SolutionDir)include
-   2. \$(SolutionDir)include\freeglut\include\ 
-   3. $(SolutionDir)include\glew\include\ 
+    1. \$(SolutionDir)include
+    2. \$(SolutionDir)include\freeglut\include\ 
+    3. $(SolutionDir)include\glew\include\ 
 6. Go to Linker -> General, and ad the following to Additional Library Directories 
-   1. $(SolutionDir)include\freeglut\lib\\$(LibrariesArchitecture)\ 
-   2. $(SolutionDir)include\glew\lib\Release\\$(LibrariesArchitecture)\ 
+    1. $(SolutionDir)include\freeglut\lib\\$(LibrariesArchitecture)\ 
+    2. $(SolutionDir)include\glew\lib\Release\\$(LibrariesArchitecture)\ 
 7. Then under Linker -> Input, add the following to Additional Dependencies
-   1. freeglut.lib
-   2. glew32.lib
+    1. freeglut.lib
+    2. glew32.lib
 8. Under Build Events, add the following to Post-Build Event Command Line.
-(NOTE) - shader.vert and shader.frag MUST be in the same folder as the .exe.
-  1. copy /Y "$(SolutionDir)brick.png" "$(TargetDir)"
-  1. copy /Y "$(SolutionDir)brick-specular.png" "$(TargetDir)"
-  1. copy /Y "$(SolutionDir)shader.vert" "$(TargetDir)"
-  1. copy /Y "$(SolutionDir)shader.frag" "$(TargetDir)"
-  1. copy /Y "$(SolutionDir)teapot.mtl" "$(TargetDir)"
-  1. copy /Y "$(SolutionDir)teapot.obj" "$(TargetDir)"
+    1. copy /Y "$(SolutionDir)brick.png" "$(TargetDir)"
+    1. copy /Y "$(SolutionDir)brick-specular.png" "$(TargetDir)"
+    1. copy /Y "$(SolutionDir)shader.vert" "$(TargetDir)"
+    1. copy /Y "$(SolutionDir)shader.frag" "$(TargetDir)"
+    1. copy /Y "$(SolutionDir)teapot.mtl" "$(TargetDir)"
+    1. copy /Y "$(SolutionDir)teapot.obj" "$(TargetDir)"
 9. You can now build, then launch ObjRenderer.exe from the command prompt in the Release folder. 
 
 
