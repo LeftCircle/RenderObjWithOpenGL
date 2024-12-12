@@ -1,17 +1,26 @@
 # An obj renderer with OpenGL
-The name might be TeapotVisualStudio, but it can render .obj files!  
 
 For a more in depth breakdown of the code, checkout the [blog breakdown](https://www.richardcato.com/blogs/interactivecomputergraphics)
 
 Usage:
-  TeapotVisualStudio.exe <filename.obj>
+  TeapotVisualStudio.exe <path_to.obj>
   the .obj file should contain a material that also includes ambient, diffuse, and specular maps
   Paths to the maps should be relative to the .obj file
 
 # Running the code
-1. Open the visual studio solution
+1. OpenTeapotVisualStudio.sln, the visual studio solution
 2. Set the platform to x86 and the build mode to release
-3. You should be able to build! 
+3. Build the solution
+4. Navigate to the Release folder
+5. Confirm that ObjRenderer.exe is in the Release folder along with
+  1. brick.png
+  2. brick-specular.png
+  3. freeglut.dll
+  4. shader.frag
+  5. shader.vert
+  6. teapot.mtl
+  7. teapot.obj
+6. You can now run ObjRenderer.exe from the command prompt with ObjRendere.exe <path_to.obj>
 
 # Configuring Visual Studio
 1. Create a new visual studio empty C++ project, then add all of the files to the
@@ -32,6 +41,16 @@ Usage:
 7. Then under Linker -> Input, add the following to Additional Dependencies
    1. freeglut.lib
    2. glew32.lib
+8. Under Build Events, add the following to Post-Build Event Command Line.
+(NOTE) - shader.vert and shader.frag MUST be in the same folder as the .exe.
+  1. copy /Y "$(SolutionDir)brick.png" "$(TargetDir)"
+  1. copy /Y "$(SolutionDir)brick-specular.png" "$(TargetDir)"
+  1. copy /Y "$(SolutionDir)shader.vert" "$(TargetDir)"
+  1. copy /Y "$(SolutionDir)shader.frag" "$(TargetDir)"
+  1. copy /Y "$(SolutionDir)teapot.mtl" "$(TargetDir)"
+  1. copy /Y "$(SolutionDir)teapot.obj" "$(TargetDir)"
+9. You can now build, then launch ObjRenderer.exe from the command prompt in the Release folder. 
+
 
 # Descirption
 This is an OpenGL program that loads a teapot object and displays it on the screen.

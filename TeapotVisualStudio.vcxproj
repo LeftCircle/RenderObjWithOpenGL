@@ -33,6 +33,7 @@
     <ProjectGuid>{8aec9ffb-664f-4f49-94b5-cf3222c1ae01}</ProjectGuid>
     <RootNamespace>TeapotVisualStudio</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ObjRenderer</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

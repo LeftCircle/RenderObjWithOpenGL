@@ -4,7 +4,7 @@ See the README for instructions on how to run the project with Visual Studio.
 -----------------------------------------------------------------------------
 
 Usage:
-  TeapotVisualStudio.exe <filename.obj>
+  ObjRenderer.exe <filename.obj>
   the .obj file should contain a material that also includes ambient, diffuse, and specular maps
   Paths to the maps should be relative to the .obj file
 
